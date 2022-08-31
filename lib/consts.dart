@@ -9,7 +9,7 @@ Color thirdColor = const Color(0xffFFF3E9);
 // Nunito Font
 TextStyle nunito = GoogleFonts.nunito();
 TextStyle nunitoTitle = nunito.copyWith(
-    color: primaryColor, fontSize: 32, fontWeight: FontWeight.w400);
+    color: primaryColor, fontSize: 32, fontWeight: FontWeight.w700);
 
 // Manrope Font
 TextStyle manrope = GoogleFonts.manrope();
