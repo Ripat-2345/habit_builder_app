@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:habit_builder_app/consts.dart';
 
 class WidgetAppBar extends StatelessWidget {
   const WidgetAppBar({Key? key, this.prefix, this.title, this.suffix})

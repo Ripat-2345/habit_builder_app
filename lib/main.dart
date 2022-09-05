@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habit_builder_app/screens/home/home_screen.dart';
+import 'package:habit_builder_app/widgets/widget_bottom_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: WidgetBottomNavigation(),
     );
   }
 }
