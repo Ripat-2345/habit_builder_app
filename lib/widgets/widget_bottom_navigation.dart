@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_builder_app/consts.dart';
+import 'package:habit_builder_app/screens/course/course_screen.dart';
 import 'package:habit_builder_app/screens/home/home_screen.dart';
 import 'package:habit_builder_app/screens/onboarding/onboarding_screen.dart';
 
@@ -28,7 +29,7 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         width: 50,
         height: 30,
       ),
-      Onboarding(),
+      const CourseScreen(),
     ],
     [
       Image.asset(
@@ -88,8 +89,7 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         //bottom navigation bar on scaffold
         color: Colors.white,
         shape: const CircularNotchedRectangle(), //shape of notch
-        notchMargin:
-            8, //notche margin between floating button and bottom appbar
+        notchMargin: 6,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 23, vertical: 15),
           child: Row(
