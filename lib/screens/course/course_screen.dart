@@ -247,6 +247,8 @@ class _CourseScreenState extends State<CourseScreen> {
                             MaterialPageRoute(
                               builder: (context) => DetailCourseScreen(
                                 habitTitle: _habitImages[index][1],
+                                duration: _habitImages[index][2],
+                                totalLesson: _habitImages[index][3],
                               ),
                             ),
                           );
