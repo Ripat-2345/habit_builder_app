@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habit_builder_app/screens/course/detail_course_screen.dart';
 import 'package:habit_builder_app/widgets/widget_app_bar.dart';
 
 import '../../consts.dart';
@@ -239,94 +240,106 @@ class _CourseScreenState extends State<CourseScreen> {
                   child: ListView.builder(
                     itemCount: _habitImages.length,
                     itemBuilder: (context, index) {
-                      return Container(
-                        width: 374,
-                        height: 274,
-                        margin: const EdgeInsets.only(bottom: 12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              width: double.infinity,
-                              height: 166,
-                              decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(12),
-                                  topRight: Radius.circular(12),
-                                ),
-                                image: DecorationImage(
-                                  image: AssetImage(_habitImages[index][0]),
-                                ),
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailCourseScreen(
+                                habitTitle: _habitImages[index][1],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(12),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    _habitImages[index][1],
-                                    style: manrope.copyWith(
-                                      color: primaryColor,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w700,
-                                    ),
+                          );
+                        },
+                        child: Container(
+                          width: 374,
+                          height: 274,
+                          margin: const EdgeInsets.only(bottom: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: double.infinity,
+                                height: 166,
+                                decoration: BoxDecoration(
+                                  borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(12),
+                                    topRight: Radius.circular(12),
                                   ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            _habitImages[index][2],
-                                            style: manrope.copyWith(
-                                              color: primaryColor,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          Text(
-                                            _habitImages[index][3],
-                                            style: manrope.copyWith(
-                                              color:
-                                                  primaryColor.withOpacity(0.5),
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
+                                  image: DecorationImage(
+                                    image: AssetImage(_habitImages[index][0]),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      _habitImages[index][1],
+                                      style: manrope.copyWith(
+                                        color: primaryColor,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
                                       ),
-                                      InkWell(
-                                        onTap: () {},
-                                        child: Container(
-                                          width: 32,
-                                          height: 32,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(100),
-                                            color:
-                                                primaryColor.withOpacity(0.3),
-                                          ),
-                                          child: Icon(
-                                            Icons.bookmark_border_rounded,
-                                            size: 18,
-                                            color: primaryColor,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              _habitImages[index][2],
+                                              style: manrope.copyWith(
+                                                color: primaryColor,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            Text(
+                                              _habitImages[index][3],
+                                              style: manrope.copyWith(
+                                                color: primaryColor
+                                                    .withOpacity(0.5),
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        InkWell(
+                                          onTap: () {},
+                                          child: Container(
+                                            width: 32,
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                              color:
+                                                  primaryColor.withOpacity(0.3),
+                                            ),
+                                            child: Icon(
+                                              Icons.bookmark_border_rounded,
+                                              size: 18,
+                                              color: primaryColor,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       );
                     },
