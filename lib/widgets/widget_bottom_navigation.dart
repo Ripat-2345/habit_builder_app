@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_builder_app/consts.dart';
+import 'package:habit_builder_app/screens/community/community_screen.dart';
 import 'package:habit_builder_app/screens/course/course_screen.dart';
 import 'package:habit_builder_app/screens/home/home_screen.dart';
 import 'package:habit_builder_app/screens/onboarding/onboarding_screen.dart';
@@ -37,7 +38,7 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         width: 50,
         height: 30,
       ),
-      const HomeScreen(),
+      const CommunityScreen(),
     ],
     [
       Image.asset(
