@@ -3,7 +3,7 @@ import 'package:habit_builder_app/consts.dart';
 import 'package:habit_builder_app/screens/community/community_screen.dart';
 import 'package:habit_builder_app/screens/course/course_screen.dart';
 import 'package:habit_builder_app/screens/home/home_screen.dart';
-import 'package:habit_builder_app/screens/onboarding/onboarding_screen.dart';
+import 'package:habit_builder_app/screens/setting/setting_screen.dart';
 
 class WidgetBottomNavigation extends StatefulWidget {
   const WidgetBottomNavigation({Key? key}) : super(key: key);
@@ -38,7 +38,7 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         width: 50,
         height: 30,
       ),
-      const CommunityScreen(),
+      CommunityScreen(),
     ],
     [
       Image.asset(
@@ -46,7 +46,7 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         width: 50,
         height: 30,
       ),
-      Onboarding(),
+      SettingScreen(),
     ],
   ];
 
