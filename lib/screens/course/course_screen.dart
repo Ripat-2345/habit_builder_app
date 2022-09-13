@@ -161,6 +161,9 @@ class _CourseScreenState extends State<CourseScreen> {
                           ),
                           child: Center(
                             child: DropdownButton(
+                              underline: DropdownButtonHideUnderline(
+                                child: Container(),
+                              ),
                               value: _popularValue,
                               isExpanded: true,
                               icon: Icon(
@@ -202,6 +205,9 @@ class _CourseScreenState extends State<CourseScreen> {
                       ),
                       child: Center(
                         child: DropdownButton(
+                          underline: DropdownButtonHideUnderline(
+                            child: Container(),
+                          ),
                           value: _filterValue,
                           isExpanded: true,
                           icon: Icon(

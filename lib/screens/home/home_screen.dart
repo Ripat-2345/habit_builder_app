@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_builder_app/consts.dart';
+import 'package:habit_builder_app/screens/profile/profile_screen.dart';
 import 'package:habit_builder_app/widgets/widget_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -48,12 +49,22 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  suffix: ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Image.asset(
-                      "assets/images/profile_img.png",
-                      width: 44,
-                      height: 44,
+                  suffix: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100),
+                      child: Image.asset(
+                        "assets/images/profile_img.png",
+                        width: 44,
+                        height: 44,
+                      ),
                     ),
                   ),
                 ),
