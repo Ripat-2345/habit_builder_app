@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habit_builder_app/widgets/widget_bottom_navigation.dart';
+import 'package:habit_builder_app/screens/auth/sign_up_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WidgetBottomNavigation(),
+      home: SignUpScreen(),
     );
   }
 }
