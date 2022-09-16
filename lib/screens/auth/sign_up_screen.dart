@@ -47,6 +47,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 32,
                 ),
                 const WidgetTextField(
+                  color: Colors.white,
                   hintText: "Username",
                   prefixIcon: "assets/icons/user_icon.png",
                   isObsecure: false,
@@ -55,6 +56,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 8,
                 ),
                 const WidgetTextField(
+                  color: Colors.white,
                   hintText: "Email",
                   prefixIcon: "assets/icons/mail_icon.png",
                   isObsecure: false,
@@ -63,6 +65,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 8,
                 ),
                 const WidgetTextField(
+                  color: Colors.white,
                   hintText: "Password",
                   prefixIcon: "assets/icons/lock_vector_icon.png",
                   isObsecure: true,
@@ -223,6 +226,115 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       width: MediaQuery.of(context).size.width / 4,
                       height: 1,
                       color: Colors.grey,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 181,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/icons/google_icon.png",
+                              width: 24,
+                              height: 24,
+                            ),
+                            const SizedBox(
+                              width: 16,
+                            ),
+                            Text(
+                              "Google",
+                              style: manrope.copyWith(
+                                color: primaryColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 181,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "assets/icons/facebook_icon.png",
+                              width: 24,
+                              height: 24,
+                            ),
+                            const SizedBox(
+                              width: 16,
+                            ),
+                            Text(
+                              "Facebook",
+                              style: manrope.copyWith(
+                                color: primaryColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 18,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account? ",
+                      style: manrope.copyWith(
+                        color: primaryColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        "Sign In",
+                        style: manrope.copyWith(
+                          color: primaryColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
                   ],
                 ),

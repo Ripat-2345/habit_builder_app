@@ -5,10 +5,12 @@ import '../consts.dart';
 class WidgetTextField extends StatefulWidget {
   const WidgetTextField({
     Key? key,
+    required this.color,
     required this.hintText,
     required this.prefixIcon,
     required this.isObsecure,
   }) : super(key: key);
+  final Color color;
   final String hintText;
   final String prefixIcon;
   final bool isObsecure;
@@ -38,7 +40,7 @@ class _WidgetTextFieldState extends State<WidgetTextField> {
           fontWeight: FontWeight.w600,
         ),
         decoration: InputDecoration(
-          fillColor: Colors.white,
+          fillColor: widget.color,
           filled: true,
           hintText: widget.hintText,
           hintStyle: manrope.copyWith(
