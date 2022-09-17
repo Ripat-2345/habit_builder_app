@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_builder_app/consts.dart';
+import 'package:habit_builder_app/widgets/widget_bottom_navigation.dart';
 import 'package:habit_builder_app/widgets/widget_text_field.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -179,7 +180,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   width: double.infinity,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WidgetBottomNavigation(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: secondaryColor,
                       elevation: 0,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habit_builder_app/consts.dart';
 import 'package:habit_builder_app/screens/auth/sign_up_screen.dart';
-import 'package:habit_builder_app/screens/home/home_screen.dart';
+import 'package:habit_builder_app/widgets/widget_bottom_navigation.dart';
 import 'package:habit_builder_app/widgets/widget_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -203,7 +203,8 @@ class SignInScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const HomeScreen(),
+                                    builder: (context) =>
+                                        const WidgetBottomNavigation(),
                                   ),
                                 );
                               },
