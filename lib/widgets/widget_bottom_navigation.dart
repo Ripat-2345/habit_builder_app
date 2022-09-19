@@ -3,6 +3,7 @@ import 'package:habit_builder_app/consts.dart';
 import 'package:habit_builder_app/screens/community/community_screen.dart';
 import 'package:habit_builder_app/screens/course/course_screen.dart';
 import 'package:habit_builder_app/screens/home/home_screen.dart';
+import 'package:habit_builder_app/screens/home/new_habit_screen.dart';
 import 'package:habit_builder_app/screens/setting/setting_screen.dart';
 
 class WidgetBottomNavigation extends StatefulWidget {
@@ -59,6 +60,12 @@ class _WidgetBottomNavigationState extends State<WidgetBottomNavigation> {
         //Floating action button on Scaffold
         onPressed: () {
           //code to execute on button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const NewHabitScreen(),
+            ),
+          );
         },
         child: Container(
           decoration: BoxDecoration(
